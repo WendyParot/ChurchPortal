@@ -10,9 +10,9 @@
      &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
       &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
       &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-<a href="https://www.instagram.com/reschurch83/"><img src="photo/instagram.png" alt="" width="40px" height="40px" /></a>
-			&nbsp <a href="https://twitter.com/reschurch83"><img src="photo/tweet.jpg" alt="" width="40px" height="40px" /></a>
-			&nbsp  <a href="https://www.facebook.com/profile.php?id=100015435543315"><img src="photo/face.jpg" alt="" width="40px" height="40px" /></a>
+<a href="https://www.instagram.com/reschurch83/"><img src="../photo/instagram.png" alt="" width="40px" height="40px" /></a>
+			&nbsp <a href="https://twitter.com/reschurch83"><img src="../photo/tweet.jpg" alt="" width="40px" height="40px" /></a>
+			&nbsp  <a href="https://www.facebook.com/profile.php?id=100015435543315"><img src="../photo/face.jpg" alt="" width="40px" height="40px" /></a>
 
 <br>	
 <br>

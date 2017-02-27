@@ -2,8 +2,8 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Home</title>
-<link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Wedding</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
 
     </head>
     <body>
@@ -81,7 +81,7 @@
 	
 	<div id="site_content">		
 		
-	<img src="photo/simbahan.jpg" width="100%" height="500px" align="left">
+	<img src="photo/wed.jpg" width="100%" height="500px" align="left">
 	
 	
 </div>
