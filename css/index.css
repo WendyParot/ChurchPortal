@@ -137,7 +137,9 @@ li.dropdown {
 	margin-bottom:2px;
 	margin-top: 2px;
 	overflow:auto;
-   
+        font-family: calibri;
+        color: darkslategray;
+        font-size: 20px;
 	
 
 }
@@ -180,3 +182,17 @@ nav ul li a:hover {
  
 }
 
+.image { 
+   position: relative; 
+   width: 100%; /* for IE 6 */
+}
+
+h2 { 
+   position: absolute; 
+   top: 480px; 
+   left: 0; 
+   width: 100%;
+   color:white;
+   font-family:arial;
+   font-size: 70px;
+}

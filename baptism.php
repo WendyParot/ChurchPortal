@@ -82,8 +82,11 @@
 	<div id="site_content">		
 		
 	<img src="photo/bappp.jpg" width="100%" height="500px" align="left">
+        <center> <h2>BAPTISM</h2>
+                  </center>
         </div>
-           
+            <p><center>The Catholic Sacrament of Baptism. Baptism is the one sacrament that all Christian denominations share in common.</center></p>
+		
 
 	</div> 
 			

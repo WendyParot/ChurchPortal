@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>Home</title>
 <link rel="stylesheet" type="text/css" href="css/index.css">
-
+<link rel="shortcut icon" href="favicon.ico" />
     </head>
     <body>
       
@@ -79,11 +79,11 @@
 		
 	<div id="body">
 	
-	<div id="site_content">		
+	<div id="image">		
 		
-	<img src="photo/simbahan.jpg" width="100%" height="500px" align="left">
-	
-	
+            <img src="photo/simbahan.jpg" width="100%" height="500px" align="left" alt="Sample"/>
+            <center><h2></h2></center>
+          
 </div>
 
 	</div> 

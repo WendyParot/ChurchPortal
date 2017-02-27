@@ -79,12 +79,18 @@
 		
 	<div id="body">
 	
-	<div id="site_content">		
+	<div id="image">		
 		
 	<img src="photo/diedd.jpg" width="100%" height="500px" align="left">
-	
+	<center><h2>FUNERAL</h2></center>
 	
 </div>
+            <p><center> "At the death of a Christian, whose life of faith was begun in the waters of Baptism and strengthened at the Eucharistic table, <br>
+		the Church intercedes on behalf of the deceased because of its confident belief that death is not the end, nor does it break the bonds forged in life. <br>
+		The Church also ministers to the sorrowing and consoles them in the funeral rites with the comforting Word of God and the Sacrament of the Eucharist."<br>
+		
+		(Order of Christian Funerals, no. 4)</center></p>
+		
 
 	</div> 
 			
