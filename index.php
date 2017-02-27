@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Home</title>
-<link rel="stylesheet" type="text/css" href="css/index.css">
+<link rel="stylesheet" type="text/css" href="css/login.css">
 <link rel="shortcut icon" href="favicon.ico" />
     </head>
     <body>
@@ -26,9 +26,7 @@
 		<b><li>
 		<a href="index.php">Home &nbsp &nbsp </a>
 		</li>
-                <li>
-                    <a href="#">Announcements &nbsp &nbsp </a>
-		</li>
+                
 		 <li class="dropdown"><a href="#" class="dropbtn">Reservation</a>
             <div class="dropdown-content">
                 
@@ -50,6 +48,9 @@
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                
                     &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</a>
 		</li>
@@ -81,13 +82,20 @@
 	
 	<div id="image">		
 		
-            <img src="photo/simbahan.jpg" width="100%" height="500px" align="left" alt="Sample"/>
-            <center><h2></h2></center>
-          
+            <img src="photo/simbahan.jpg" width="900px" height="500px" align="left alt="Sample"/>
+           
+        <div id="login">
+            	
+
+				
+			
+</div>	
+	
+                </div>   
 </div>
 
 	</div> 
-			
+           
 	<?php
 	include 'footer.php';
 	
