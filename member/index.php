@@ -93,7 +93,7 @@ $name = $row[1];
 	
 	<div id="site_content">		
 		
-            <img src="../photo/cnf.jpg" width="67.5%" height="500px" align="left">
+            <img src="../photo/light.jpg" width="67.5%" height="500px" align="left">
         </div>
            
 <div id="login">

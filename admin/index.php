@@ -103,7 +103,7 @@ if ($level == '')
 	
 	<div id="site_content">		
 		
-            <img src="../photo/cnf.jpg" width="67.5%" height="500px" align="left">
+            <img src="../photo/team.jpg" width="67.5%" height="500px" align="left">
         </div>
             <div id="login">
             	 <center><h1>Announcement</h1></center>

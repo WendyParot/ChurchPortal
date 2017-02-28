@@ -102,7 +102,7 @@ if (isset($_SESSION['username'])){
 	
 	<div id="site_content">		
 		
-	<img src="photo/mat.jpg" width="900px" height="500px" align="left">
+            <img src="photo/prayer.jpeg" width="900px" height="500px" align="left">
 	
 	
 		<div id="login">

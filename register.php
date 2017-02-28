@@ -90,7 +90,7 @@ session_start();
 	
 	<div id="site_content">		
 		
-	<img src="photo/cnf.jpg" width="900px" height="500px" align="left">
+            <img src="photo/man.jpg" width="900px" height="500px" align="left">
 	
 	
 		<div id="login">

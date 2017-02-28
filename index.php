@@ -87,7 +87,7 @@ include 'dbconnect.php';
 	
 	<div id="image">		
 		
-            <img src="photo/simbahan.jpg" width="900px" height="500px" align="left alt="Sample"/>
+            <img src="photo/guy.jpg" width="900px" height="500px" align="left alt="Sample"/>
            
         	 <div id="login">
             	
