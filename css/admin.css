@@ -128,9 +128,13 @@ li.dropdown {
 
     #login {
 
-	font-family: "Calibri";
-	background-color:gray;
-	width:433px;
+	font-family: "arial";
+	background-image:url('../photo/Wood.jpg');
+        background-repeat: no-repeat; 
+        background-size: cover;
+        background-attachment:fixed;
+
+        width:433px;
 	height:500px;
 	
 	color:white;
@@ -192,4 +196,5 @@ nav ul li a:hover {
   color: black;
  
 }
+
 

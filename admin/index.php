@@ -21,7 +21,7 @@ if ($level == '')
     <head>
         <meta charset="UTF-8">
         <title>Admin</title>
-        <link rel="stylesheet" type="text/css" href="../css/index.css">
+        <link rel="stylesheet" type="text/css" href="../css/admin.css">
 
     </head>
     <body>
@@ -103,9 +103,42 @@ if ($level == '')
 	
 	<div id="site_content">		
 		
-            <img src="../photo/cnf.jpg" width="100%" height="500px" align="left">
+            <img src="../photo/cnf.jpg" width="67.5%" height="500px" align="left">
         </div>
-           
+            <div id="login">
+            	 <center><h1>Announcement</h1></center>
+		</table>
+
+				<div style="width:100%; ">
+				
+                                    <center><table cellpadding="0" cellspacing="1" border="1" >
+
+						<tr>
+							<th>Event</th>
+							<th>Message</th>
+							
+							
+						</tr>
+
+						<?php
+						$sql = "select event,msg,date,time from announcement order by date desc";
+						$query=mysql_query($sql)or die(mysql_error());
+						while($row=mysql_fetch_array($query)){
+						?>
+						
+						<tr>
+						<td><?php echo $row[0]; ?></td>
+						<td><?php echo $row[1]; ?></td>
+						
+						</tr>
+						<?php } ?>
+
+				</table>
+
+
+				
+			</div>
+</div>
 
 	</div> 
 			

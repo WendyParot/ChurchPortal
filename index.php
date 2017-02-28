@@ -1,9 +1,14 @@
+<?php
+include 'dbconnect.php';
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
         <title>Home</title>
-<link rel="stylesheet" type="text/css" href="css/login.css">
+<link rel="stylesheet" type="text/css" href="css/home.css">
 <link rel="shortcut icon" href="favicon.ico" />
     </head>
     <body>
@@ -84,12 +89,38 @@
 		
             <img src="photo/simbahan.jpg" width="900px" height="500px" align="left alt="Sample"/>
            
-        <div id="login">
+        	 <div id="login">
             	
+			<center><h1>Announcement</h1></center>
+		</table>
 
+				<div style="width:100%;">
+				
+			<center>	<table cellpadding="1" cellspacing="1" border="1" class="table table-striped table-bordered" id="example">
+
+						<tr>
+							<th>Event</th>
+							<th>Message</th>
+							
+						</tr>
+
+						<?php
+						$sql = "select event,msg,date,time from announcement order by date desc";
+						$query=mysql_query($sql)or die(mysql_error());
+						while($row=mysql_fetch_array($query)){
+						?>
+						
+						<tr>
+						<td><?php echo $row[0]; ?></td>
+						<td><?php echo $row[1]; ?></td></center>
+						
+						</tr>
+						<?php } ?>
+
+				</table>
 				
 			
-</div>	
+</div>
 	
                 </div>   
 </div>

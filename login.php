@@ -25,7 +25,7 @@ if (isset($_SESSION['username'])){
     <head>
         <meta charset="UTF-8">
         <title>Log In</title>
-<link rel="stylesheet" type="text/css" href="css/login.css">
+<link rel="stylesheet" type="text/css" href="css/log.css">
 
     </head>
     <body>
@@ -48,10 +48,7 @@ if (isset($_SESSION['username'])){
 		<b><li>
 		<a href="index.php">Home &nbsp &nbsp </a>
 		</li>
-                <li>
-                    <a href="announcements.php">Announcements &nbsp &nbsp </a>
-		</li>
-		 <li class="dropdown"><a href="#" class="dropbtn">Reservation</a>
+               <li class="dropdown"><a href="#" class="dropbtn">Reservation</a>
             <div class="dropdown-content">
                 
                 <a href="baptism.php">Baptism</a>
@@ -72,6 +69,9 @@ if (isset($_SESSION['username'])){
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                
                     &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</a>
 		</li>
@@ -84,7 +84,6 @@ if (isset($_SESSION['username'])){
             echo '</div>';
 			echo '</li>';
 			}
-			
 			
         if(isset($_SESSION['id']))
         {

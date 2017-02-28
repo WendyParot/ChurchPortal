@@ -11,7 +11,7 @@ session_start();
     <head>
         <meta charset="UTF-8">
         <title>Register</title>
-<link rel="stylesheet" type="text/css" href="css/login.css">
+<link rel="stylesheet" type="text/css" href="css/register.css">
 
     </head>
     <body>
@@ -34,10 +34,7 @@ session_start();
 		<b><li>
 		<a href="index.php">Home &nbsp &nbsp </a>
 		</li>
-                <li>
-                    <a href="#.php">Announcements &nbsp &nbsp </a>
-		</li>
-		 <li class="dropdown"><a href="#" class="dropbtn">Reservation</a>
+                <li class="dropdown"><a href="#" class="dropbtn">Reservation</a>
             <div class="dropdown-content">
                 
                 <a href="baptism.php">Baptism</a>
@@ -58,6 +55,9 @@ session_start();
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                
                     &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</a>
 		</li>
@@ -70,6 +70,7 @@ session_start();
             echo '</div>';
 			echo '</li>';
 			}
+			
 			
 			
         if(isset($_SESSION['id']))

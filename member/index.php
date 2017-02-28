@@ -15,7 +15,7 @@ $name = $row[1];
     <head>
         <meta charset="UTF-8">
         <title>My Account</title>
-        <link rel="stylesheet" type="text/css" href="../css/index.css">
+        <link rel="stylesheet" type="text/css" href="../css/myaccount.css">
 
     </head>
     <body>
@@ -38,15 +38,12 @@ $name = $row[1];
 		<b><li>
 		<a href="index.php">Home &nbsp &nbsp </a>
 		</li>
-                <li>
-                    <a href="#">Announcements &nbsp &nbsp </a>
-		</li>
-		 <li class="dropdown"><a href="#" class="dropbtn">Reservation</a>
+                 <li class="dropdown"><a href="#" class="dropbtn">Reservation</a>
             <div class="dropdown-content">
                 
-                <a href="rebaptism.php">Baptism</a>
-		<a href="rewedding.php">Wedding</a>
-                <a href="refuneral.php">Funeral</a>
+                <a href="#">Baptism</a>
+		<a href="#">Wedding</a>
+                <a href="#">Funeral</a>
 				
 	</li>
 		
@@ -62,6 +59,9 @@ $name = $row[1];
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                
                     &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</a>
 		</li>
@@ -69,8 +69,8 @@ $name = $row[1];
 			if(!isset($_SESSION["id"])){
             echo '<li class="dropdown"><a href="#" class="dropbtn">Get Involved</a>';
             echo '<div class="dropdown-content">';
+			echo '<a href="../logout.php">Log Out</a>';
 			echo '<a href="#">Donate</a>';
-                        echo '<a href="../logout.php">Log Out</a>';
             echo '</div>';
 			echo '</li>';
 			}
@@ -93,10 +93,41 @@ $name = $row[1];
 	
 	<div id="site_content">		
 		
-            <img src="../photo/cnf.jpg" width="100%" height="500px" align="left">
+            <img src="../photo/cnf.jpg" width="67.5%" height="500px" align="left">
         </div>
            
+<div id="login">
+    <center><h1>Announcement</h1></center>
+		</table>
 
+				<div style="width:100%;">
+				
+				<table cellpadding="1" cellspacing="1" border="1" class="table table-striped table-bordered" id="example">
+
+						<tr>
+							<th>Event</th>
+							<th>Message</th>
+							
+							
+						</tr>
+
+						<?php
+						$sql = "select event,msg,date,time from announcement order by date desc";
+						$query=mysql_query($sql)or die(mysql_error());
+						while($row=mysql_fetch_array($query)){
+						?>
+						
+						<tr>
+						<td><?php echo $row[0]; ?></td>
+						<td><?php echo $row[1]; ?></td>
+						
+						</tr>
+						<?php } ?>
+
+				</table>
+				</div>
+		
+            	</div>
 	</div> 
 			
 	<?php
