@@ -25,12 +25,9 @@
 		<b><li>
 		<a href="index.php">Home &nbsp &nbsp </a>
 		</li>
-                <li class="dropdown"><a href="#" class="dropbtn">Announcement     &nbsp </a>
+                <li class="dropdown"><a href="add_annoucement.php" class="dropbtn">Announcement     &nbsp </a>
             <div class="dropdown-content">
                 
-                <a href="add_annoucement.php">Add</a>
-		<a href="#">Edit</a>
-                <a href="#">Delete</a>
                 
 		 <li class="dropdown"><a href="#" class="dropbtn">Request     &nbsp &nbsp</a>
             <div class="dropdown-content">
@@ -42,7 +39,7 @@
 	</li>
 		
                 <li>
-                    <a href="#">Members &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    <a href="manageuser.php">Members &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                         &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                         &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                         &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp

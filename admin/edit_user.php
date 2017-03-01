@@ -1,40 +1,15 @@
-<?php include('../dbconnect.php');
-
-session_start();
-$user = $_SESSION['username'];
-$login=mysql_query("select * from user where user_name='$user'")or die(mysql_error());
-$row=mysql_fetch_row($login);
-$level = $row[3];
-
-if ($level == 2)
-	{
-		header('location:../member/index.php');
-	}
-
-if ($level == '')
-	{
-		header('location:../index.php');
-	}
+<?php 
+include('header.php');
 ?>
-	<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Admin</title>
-        <link rel="stylesheet" type="text/css" href="../css/admin.css">
+<body>
 
-    </head>
-    <body>
       
       
 
 
 <div id="wrapper"> 
 	
-	<div id="header"> 
-	<img src="../photo/res.png"  width="40%" height="100%">	
-	</div>
-
+	
 	
 	
 	
@@ -47,7 +22,7 @@ if ($level == '')
                 <li class="dropdown"><a href="add_annoucement.php" class="dropbtn">Announcement     &nbsp </a>
             <div class="dropdown-content">
                 
-                
+               
 		 <li class="dropdown"><a href="#" class="dropbtn">Request     &nbsp &nbsp</a>
             <div class="dropdown-content">
                 
@@ -96,52 +71,67 @@ if ($level == '')
 		</ul>
 		 </nav>
 		
-	<div id="body">
+<div id="body">
 	
-	<div id="site_content">		
-		
-            <img src="../photo/team.jpg" width="67.5%" height="500px" align="left">
-        </div>
-            <div id="login">
-            	 <center><h1>Announcement</h1></center>
-		</table>
+	
+          		<br>
+		<br>
 
-				<div style="width:100%; ">
-				
-                                    <center><table cellpadding="0" cellspacing="1" border="1" >
+<div class="container">
+    &nbsp &nbsp<h1>Update User</h1>
+<hr>
+<?php
+include('../dbconnect.php');
 
-						<tr>
-							<th>Event</th>
-							<th>Message</th>
-							
-							
-						</tr>
+	$id=$_GET['id'];
+	$sql = "SELECT * FROM 
+			user 
+			 WHERE
+			 user_id = $id
+			 ";
+	$result = mysql_fetch_array(mysql_query($sql));
 
-						<?php
-						$sql = "select event,msg,date,time from announcement order by date desc";
-						$query=mysql_query($sql)or die(mysql_error());
-						while($row=mysql_fetch_array($query)){
-						?>
-						
-						<tr>
-						<td><?php echo $row[0]; ?></td>
-						<td><?php echo $row[1]; ?></td>
-						
-						</tr>
-						<?php } ?>
+	if(!empty($_GET['error']) && $_GET['error']== '101'){
+		$error = "The password did not match!";
+	}else{
+		$error = "";
+	}
 
-				</table>
+	?>
+<form class="form-horizontal" action="update_user.php" method="post">    
 
 
-				
-			</div>
-</div>
-
-	</div> 
+	<div class="thumbnail">
+		<div class="control-group">
+	    	<label class="control-label" for="user_name"><b>Username</b> </label>&nbsp;
+			<input name="user_name" id="user_name" type="text" value="<?= $result['user_name'] ?>" /><br>
 			
-	<?php
+			<label class="control-label" for="user_name"><b>First Name</b> </label>&nbsp;
+			<input name="fname" id="fname" type="text" value="<?= $result['fname'] ?>" /><br>
+			
+			<label class="control-label" for="user_name"><b>Last Name</b> </label>&nbsp;
+			<input name="lname" id="lname" type="text" value="<?= $result['lname'] ?>" /><br>
+				
+			<label class="control-label" for="n_pass"><b>New Password</b></label>&nbsp;
+			<input name="n_pass" id="n_pass"  type="password"/><br>
+
+			<label class="control-label" for="c_pass"><b>Confirm Password</b></label>&nbsp;
+			<input name="c_pass" id="c_pass" type="password" /><br>
+
+			<label class="control-label" for="user_level"><b>Level</b></label>&nbsp;
+			<input name="user_level" id="user_level" type="text" value="<?php echo $result['user_level'] ?>" /><br>
+
+		<input name="user_id" type="hidden" value="<?= $id ?>" />
+	    </div>
+	</div>
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp;<input  class="btn btn-success" type="submit" name="btn_update" value="update"/>
+</form>
+</div>
+<font color="red" style=" position: relative;left: 400px;"><?=$error?></font>
+</div>
+<?php
 	include 'footer.php';
 	
       ?>
-    </body>
+</body>
 </html>
