@@ -1,15 +1,10 @@
-<?php
-include 'dbconnect.php';
-
-?>
-
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Home</title>
-<link rel="stylesheet" type="text/css" href="css/home.css">
-<link rel="shortcut icon" href="favicon.ico" />
+        <title>About Us</title>
+        <link rel="stylesheet" type="text/css" href="../css/index.css">
+       
     </head>
     <body>
       
@@ -19,9 +14,8 @@ include 'dbconnect.php';
 <div id="wrapper"> 
 	
 	<div id="header"> 
-	<img src="photo/res.png"  width="40%" height="100%">	
+	<img src="../photo/res.png"  width="40%" height="100%">	
 	</div>
-
 
 	
 	<div id="nav">
@@ -30,8 +24,9 @@ include 'dbconnect.php';
 		<b><li>
 		<a href="index.php">Home &nbsp &nbsp </a>
 		</li>
-                
-		 <li class="dropdown"><a href="#" class="dropbtn">Reservation</a>
+        
+	
+	  <li class="dropdown"><a href="#" class="dropbtn">Reservation</a>
             <div class="dropdown-content">
                 
                 <a href="baptism.php">Baptism</a>
@@ -39,13 +34,12 @@ include 'dbconnect.php';
                 <a href="funeral.php">Funeral</a>
 				
 	</li>
-		
+		<li>
+		<a href="certificate.php">Request Certificate &nbsp &nbsp </a>
+		</li>
                 <li>
                     <a href="about.php">About Us &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                         &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
@@ -58,17 +52,16 @@ include 'dbconnect.php';
                     &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</a>
 		</li>
-                <?php 
+              <?php 
 			if(!isset($_SESSION["id"])){
             echo '<li class="dropdown"><a href="#" class="dropbtn">Get Involved</a>';
             echo '<div class="dropdown-content">';
-			echo '<a href="login.php">Log In</a>';
-			echo '<a href="donate.php">Donate</a>';
+			echo '<a href="../logout.php">Log Out</a>';
+			echo '<a href="../donate.php">Donate</a>';
             echo '</div>';
 			echo '</li>';
 			}
-			
-			
+					
         if(isset($_SESSION['id']))
         {
         ?>
@@ -79,54 +72,45 @@ include 'dbconnect.php';
                 </b>
 		
 		
-		</ul>
+		<!--</ul>-->
 		 </nav>
-    
 		
 	<div id="body">
 	
-	<div id="image">		
+	<div id="site_content">		
 		
-            <img src="photo/guy.jpg" width="900px" height="500px" align="left alt="Sample"/>
-           
-        	 <div id="login">
-            	
-			<center><h1>Announcement</h1></center>
-		</table>
+            <img src="../photo/prayi.jpg" width="100%" height="600px" align="left">
+        <center> <h2>The Resurrection Parish Church 
+Julugan Tanza, Cavite </h2>
+                  </center>
+        </div>
+            
+            <p><center><b>The Resurrection Parish Church</b><br>
+                 
+Email us:theresurrectionparish@yahoo.com <br>
 
-				<div style="width:100%;">
-				
-			<center>	<table cellpadding="1" cellspacing="1" border="1" class="table table-striped table-bordered" id="example">
+Contact Number: <br>
+Telephone:(046)437-7156 <br>
+Cellphone:(Globe) 0935-616-8358 <br>
+Cellphone:(Smart) 0919-458-1767 <br>
+Office hours: <br>
+Tuesday-Saturday 8:30 AM-11:30 AM & 2:30 PM-4:30 PM<br> 
+Sunday 8:30 AM-11:30 AM (Half day only)	<br>
+Monday CLOSED(No Transactions)</center></p>	
 
-						<tr>
-							<th>Event</th>
-							<th>Message</th>
-							
-						</tr>
 
-						<?php
-						$sql = "select event,msg,date,time from announcement order by date desc";
-						$query=mysql_query($sql)or die(mysql_error());
-						while($row=mysql_fetch_array($query)){
-						?>
-						
-						<tr>
-						<td><?php echo $row[0]; ?></td>
-						<td><?php echo $row[1]; ?></td></center>
-						
-						</tr>
-						<?php } ?>
 
-				</table>
-				
-			
-</div>
-	
-                </div>   
-</div>
 
+
+
+
+
+
+        
+        <br>
+        </div>
 	</div> 
-      
+			
 	<?php
 	include 'footer.php';
 	

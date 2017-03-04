@@ -38,21 +38,20 @@ $name = $row[1];
 		<b><li>
 		<a href="index.php">Home &nbsp &nbsp </a>
 		</li>
-                 <li class="dropdown"><a href="#" class="dropbtn">Reservation</a>
+                   <li class="dropdown"><a href="#" class="dropbtn">Reservation</a>
             <div class="dropdown-content">
                 
-                <a href="#">Baptism</a>
-		<a href="#">Wedding</a>
-                <a href="#">Funeral</a>
+                <a href="baptism.php">Baptism</a>
+		<a href="wedding.php">Wedding</a>
+                <a href="funeral.php">Funeral</a>
 				
 	</li>
-		
+		<li>
+		<a href="certificate.php">Request Certificate &nbsp &nbsp </a>
+		</li>
                 <li>
-                    <a href="#">About Us &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    <a href="about.php">About Us &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                         &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
@@ -65,7 +64,7 @@ $name = $row[1];
                     &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</a>
 		</li>
-                <?php 
+              <?php 
 			if(!isset($_SESSION["id"])){
             echo '<li class="dropdown"><a href="#" class="dropbtn">Get Involved</a>';
             echo '<div class="dropdown-content">';

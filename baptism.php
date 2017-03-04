@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>Baptism</title>
         <link rel="stylesheet" type="text/css" href="css/index.css">
-
+       
     </head>
     <body>
       
@@ -58,7 +58,7 @@
             echo '<li class="dropdown"><a href="#" class="dropbtn">Get Involved</a>';
             echo '<div class="dropdown-content">';
 			echo '<a href="login.php">Log In</a>';
-			echo '<a href="#">Donate</a>';
+			echo '<a href="donate.php">Donate</a>';
             echo '</div>';
 			echo '</li>';
 			}
@@ -73,7 +73,7 @@
                 </b>
 		
 		
-		</ul>
+		<!--</ul>-->
 		 </nav>
 		
 	<div id="body">
@@ -86,7 +86,13 @@
         </div>
             <p><center>The Catholic Sacrament of Baptism. Baptism is the one sacrament that all Christian denominations share in common.</center></p>
 		
-
+        <form name="announcement" method="POST" action="login.php" enctype="multipart/form-data">
+					
+         <center>   <button style="font-size:15pt;font-weight: bold;color:gray;input:focus{background-color:gray}">RESERVE</button></center>
+           
+        </form>
+        <br>
+        </div>
 	</div> 
 			
 	<?php

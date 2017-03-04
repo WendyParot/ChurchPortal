@@ -1,15 +1,10 @@
-<?php
-include 'dbconnect.php';
-
-?>
-
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Home</title>
-<link rel="stylesheet" type="text/css" href="css/home.css">
-<link rel="shortcut icon" href="favicon.ico" />
+        <title>Request Certificate</title>
+        <link rel="stylesheet" type="text/css" href="../css/index.css">
+
     </head>
     <body>
       
@@ -19,10 +14,11 @@ include 'dbconnect.php';
 <div id="wrapper"> 
 	
 	<div id="header"> 
-	<img src="photo/res.png"  width="40%" height="100%">	
+	<img src="../photo/res.png"  width="40%" height="100%">	
 	</div>
 
-
+	
+	
 	
 	<div id="nav">
 		 <nav>
@@ -30,8 +26,7 @@ include 'dbconnect.php';
 		<b><li>
 		<a href="index.php">Home &nbsp &nbsp </a>
 		</li>
-                
-		 <li class="dropdown"><a href="#" class="dropbtn">Reservation</a>
+                <li class="dropdown"><a href="#" class="dropbtn">Reservation</a>
             <div class="dropdown-content">
                 
                 <a href="baptism.php">Baptism</a>
@@ -39,13 +34,12 @@ include 'dbconnect.php';
                 <a href="funeral.php">Funeral</a>
 				
 	</li>
-		
+		<li>
+		<a href="Request.php">Request Certificate &nbsp &nbsp </a>
+		</li>
                 <li>
                     <a href="about.php">About Us &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                         &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
@@ -62,12 +56,11 @@ include 'dbconnect.php';
 			if(!isset($_SESSION["id"])){
             echo '<li class="dropdown"><a href="#" class="dropbtn">Get Involved</a>';
             echo '<div class="dropdown-content">';
-			echo '<a href="login.php">Log In</a>';
-			echo '<a href="donate.php">Donate</a>';
+			echo '<a href="../logout.php">Log Out</a>';
+			echo '<a href="#">Donate</a>';
             echo '</div>';
 			echo '</li>';
 			}
-			
 			
         if(isset($_SESSION['id']))
         {
@@ -81,52 +74,29 @@ include 'dbconnect.php';
 		
 		</ul>
 		 </nav>
-    
 		
 	<div id="body">
 	
 	<div id="image">		
 		
-            <img src="photo/guy.jpg" width="900px" height="500px" align="left alt="Sample"/>
-           
-        	 <div id="login">
-            	
-			<center><h1>Announcement</h1></center>
-		</table>
-
-				<div style="width:100%;">
-				
-			<center>	<table cellpadding="1" cellspacing="1" border="1" class="table table-striped table-bordered" id="example">
-
-						<tr>
-							<th>Event</th>
-							<th>Message</th>
-							
-						</tr>
-
-						<?php
-						$sql = "select event,msg,date,time from announcement order by date desc";
-						$query=mysql_query($sql)or die(mysql_error());
-						while($row=mysql_fetch_array($query)){
-						?>
-						
-						<tr>
-						<td><?php echo $row[0]; ?></td>
-						<td><?php echo $row[1]; ?></td></center>
-						
-						</tr>
-						<?php } ?>
-
-				</table>
-				
-			
-</div>
+	<img src="../photo/wed.jpg" width="100%" height="500px" align="left">
+	<center><h2>WEDDING</h2></center>
 	
-                </div>   
 </div>
-
-	</div> 
-      
+         
+            <p><center>Marriage in the Catholic Church, also called matrimony, is the "covenant by which a man and a woman establish between themselves a partnership of the whole of life
+		 and which is ordered by its nature to the good of the spouses and the procreation and education of offspring",
+		 and which "has been raised by Christ the Lord to the dignity of a sacrament between the baptised." Catholic matrimonial law,
+		 based on Roman law regarding its focus on marriage as a free mutual agreement or contract, became the basis for the marriage law of all European countries, at least up to the Reformation.</center></p>
+	
+         <form name="announcement" method="POST" action="reserve_wedding.php" enctype="multipart/form-data">
+					
+         <center>   <button style="font-size:15pt;font-weight: bold;color:gray;input:focus{background-color:gray}">RESERVE</button></center>
+        <br>
+        </div> 
+            
+            
+			
 	<?php
 	include 'footer.php';
 	

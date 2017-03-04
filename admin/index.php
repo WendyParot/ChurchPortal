@@ -1,20 +1,5 @@
-<?php include('../dbconnect.php');
+<?php include('db.php');
 
-session_start();
-$user = $_SESSION['username'];
-$login=mysql_query("select * from user where user_name='$user'")or die(mysql_error());
-$row=mysql_fetch_row($login);
-$level = $row[3];
-
-if ($level == 2)
-	{
-		header('location:../member/index.php');
-	}
-
-if ($level == '')
-	{
-		header('location:../index.php');
-	}
 ?>
 	<!DOCTYPE html>
 <html>
@@ -22,6 +7,12 @@ if ($level == '')
         <meta charset="UTF-8">
         <title>Admin</title>
         <link rel="stylesheet" type="text/css" href="../css/admin.css">
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+        <script src="../js/jquery.js" type="text/javascript"></script>
+<script src="../js/bootstrap.js" type="text/javascript"></script>
+
+<script type="text/javascript" charset="utf-8" language="javascript" src="../js/jquery.dataTabless.js"></script>
+<script type="text/javascript" charset="utf-8" language="javascript" src="../js/DT_bootstrap.js"></script>
 
     </head>
     <body>
@@ -98,48 +89,67 @@ if ($level == '')
 		
 	<div id="body">
 	
-	<div id="site_content">		
+	<div class="container">	
 		
-            <img src="../photo/team.jpg" width="67.5%" height="500px" align="left">
+            <img src="../photo/team.jpg" width="100%" height="500px" align="left">
+   
         </div>
-            <div id="login">
-            	 <center><h1>Announcement</h1></center>
-		</table>
+<br>
+	<h1 align="center" style="color:#141E30;font-family:ethno;">ANNOUNCEMENT</font></h1>
+			<hr style="border: 1px solid gray">
+			<br>
 
-				<div style="width:100%; ">
-				
-                                    <center><table cellpadding="0" cellspacing="1" border="1" >
+		
+			<table border=1 cellpadding=4 cellspacing=5 align=center  style="border: 1px solid #141E30; width:750px;">
+	
+				<tr>
+					<th align="center" style="color:#141E30;font-family:rng; font-size:15px;">ID</th>
+					<th align="center" style="color:#141E30;font-family:rng; font-size:15px;">Event</th>
+					<th align="center" style="color:#141E30;font-family:rng; font-size:15px;">Message</th>
+		
+                                        <th align="center" style="color:#141E30;font-family:rng; font-size:15px;">Date</th>
+					<th align="center" style="color:#141E30;font-family:rng; font-size:15px;">Time</th>
+					<th align="center" style="color:#141E30;font-family:rng; font-size:15px;">Edit</th>
+					<th align="center" style="color:#141E30;font-family:rng; font-size:15px;">Delete</th>
+		
+				</tr>
 
-						<tr>
-							<th>Event</th>
-							<th>Message</th>
-							
-							
-						</tr>
+				<?php
+					$loadtb = $db->query("select * from announcement");
+					$count = $loadtb->rowCount();					
+				?>
 
-						<?php
-						$sql = "select event,msg,date,time from announcement order by date desc";
-						$query=mysql_query($sql)or die(mysql_error());
-						while($row=mysql_fetch_array($query)){
-						?>
-						
-						<tr>
-						<td><?php echo $row[0]; ?></td>
-						<td><?php echo $row[1]; ?></td>
-						
-						</tr>
-						<?php } ?>
+				<?php if($count>0): ?>
+					<?php  foreach($loadtb as $record): ?>
+					<tr>
+					<td align="center" style="color:#141E30;font-family:rng; font-size:15px;"><?php echo $record['id']; ?></td>
+					<td align="center" style="color:#141E30;font-family:rng; font-size:15px;"><?php echo $record['event']; ?></td>
+					<td align="center" style="color:#141E30;font-family:rng; font-size:15px;"><?php echo $record['msg']; ?></td>
+					
+                                        <td align="center" style="color:#141E30;font-family:rng; font-size:15px;"><?php echo $record['date']; ?></td>
+					<td align="center" style="color:#141E30;font-family:rng; font-size:15px;"><?php echo $record['time']; ?></td>
+					
+					<td align="center" style="color:#141E30;font-family:rng; font-size:15px;"><a href="edit_announcement.php
+					<?php echo '?id='.$record['id']; ?>">Edit</a></td>
+                                        <td align="center" style="color:#141E30;font-family:rng; font-size:15px;"><a href="delete_announcement.php
+					<?php echo '?id='.$record['id']; ?>" onClick="return confirm('Delete This Announcement?')">Delete</a></td>
+					</tr>
+					<?php endforeach; ?>
 
-				</table>
+				<?php else: ?>
+				<td colspan="7" align="center" style="color:#141E30;font-family:rng; font-size:15px;">No Record</td>
+				<?php endif; ?>
 
+			</table>
+		
 
-				
-			</div>
+</div>
+
 </div>
 
 	</div> 
-			
-	<?php
+		</div>	
+    	<?php
 	include 'footer.php';
 	
       ?>

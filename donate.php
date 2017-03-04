@@ -2,9 +2,9 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Funeral</title>
+        <title>Donate</title>
         <link rel="stylesheet" type="text/css" href="css/index.css">
-
+       
     </head>
     <body>
       
@@ -13,12 +13,10 @@
 
 <div id="wrapper"> 
 	
-	<?php
-            include 'header.php';
-        ?>
-	
-	
-	
+	<div id="header"> 
+	<img src="photo/res.png"  width="40%" height="100%">	
+	</div>
+
 	
 	<div id="nav">
 		 <nav>
@@ -26,7 +24,7 @@
 		<b><li>
 		<a href="index.php">Home &nbsp &nbsp </a>
 		</li>
-                 <li class="dropdown"><a href="#" class="dropbtn">Reservation</a>
+                <li class="dropdown"><a href="#" class="dropbtn">Reservation</a>
             <div class="dropdown-content">
                 
                 <a href="baptism.php">Baptism</a>
@@ -36,7 +34,7 @@
 	</li>
 		
                 <li>
-                    <a href="#">About Us &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    <a href="about.php">About Us &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                         &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                         &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                         &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
@@ -62,8 +60,7 @@
             echo '</div>';
 			echo '</li>';
 			}
-			
-			
+					
         if(isset($_SESSION['id']))
         {
         ?>
@@ -74,31 +71,39 @@
                 </b>
 		
 		
-		</ul>
+		<!--</ul>-->
 		 </nav>
-          
+		
 	<div id="body">
 	
-	<div id="image">		
+	<div id="site_content">		
 		
-	<img src="photo/diedd.jpg" width="100%" height="500px" align="left">
-	<center><h2>FUNERAL</h2></center>
-	
-</div>
+            <img src="photo/donate.jpg" width="100%" height="600px" align="left">
+        </div>
             
-            <p><center> "At the death of a Christian, whose life of faith was begun in the waters of Baptism and strengthened at the Eucharistic table, <br>
-		the Church intercedes on behalf of the deceased because of its confident belief that death is not the end, nor does it break the bonds forged in life. <br>
-		The Church also ministers to the sorrowing and consoles them in the funeral rites with the comforting Word of God and the Sacrament of the Eucharist."<br>
-		
-		(Order of Christian Funerals, no. 4)</center></p>
-                
-	 <form name="announcement" method="POST" action="login.php" enctype="multipart/form-data">
+            <p><center><b></b><br>
+                 <br>
+Giving money to a church is often called tithing or offering. 
+                                                    The definition of tithe is the tenth part of income that is set aside for the church and is sometimes seen as an obligatory part of being a church member. 
+                                                                                                        An offering is any donation amount a person wants to give. 
+                                                   </center></p>	
+
+<form name="announcement" method="POST" action="login.php" enctype="multipart/form-data">
 					
-         <center>   <button style="font-size:15pt;font-weight: bold;color:gray;input:focus{background-color:gray}">RESERVE</button></center>
+         <center>   <button style="font-size:15pt;font-weight: bold;color:gray;input:focus{background-color:gray}">DONATE</button></center>
            
         </form>
+
+
+
+
+
+
+
+        
         <br>
-       	</div> 
+        </div>
+	</div> 
 			
 	<?php
 	include 'footer.php';

@@ -16,7 +16,22 @@ if ($level == '')
 		header('location:../index.php');
 	}
 ?>
-	
+	<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Admin</title>
+        <link rel="stylesheet" type="text/css" href="../css/admin.css">
+      
+        <script src="../js/jquery.js" type="text/javascript"></script>
+<script src="../js/bootstrap.js" type="text/javascript"></script>
+
+<script type="text/javascript" charset="utf-8" language="javascript" src="../js/jquery.dataTabless.js"></script>
+<script type="text/javascript" charset="utf-8" language="javascript" src="../js/DT_bootstrap.js"></script>
+</head>
+
+
+<?php include('../dbconnect.php'); ?>	
    
    
     <body>
@@ -138,7 +153,6 @@ if ($level == '')
             </div>
             </div>
                      </div>
-
 
 
 			

@@ -58,7 +58,7 @@
             echo '<li class="dropdown"><a href="#" class="dropbtn">Get Involved</a>';
             echo '<div class="dropdown-content">';
 			echo '<a href="login.php">Log In</a>';
-			echo '<a href="#">Donate</a>';
+			echo '<a href="donate.php">Donate</a>';
             echo '</div>';
 			echo '</li>';
 			}
@@ -76,7 +76,7 @@
 		
 		</ul>
 		 </nav>
-		
+
 	<div id="body">
 	
 	<div id="image">		
@@ -90,7 +90,18 @@
 		 and which is ordered by its nature to the good of the spouses and the procreation and education of offspring",
 		 and which "has been raised by Christ the Lord to the dignity of a sacrament between the baptised." Catholic matrimonial law,
 		 based on Roman law regarding its focus on marriage as a free mutual agreement or contract, became the basis for the marriage law of all European countries, at least up to the Reformation.</center></p>
-	</div> 
+
+	 <form name="announcement" method="POST" action="login.php" enctype="multipart/form-data">
+					
+         <center>   <button style="font-size:15pt;font-weight: bold;color:gray;input:focus{background-color:gray}">RESERVE</button></center>
+           
+        </form>
+        <br>
+       
+        
+        </div> 
+            
+            
 			
 	<?php
 	include 'footer.php';

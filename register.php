@@ -21,9 +21,10 @@ session_start();
 
 <div id="wrapper"> 
 	
-	<?php
-            include 'header.php';
-        ?>
+	<div id="header"> 
+	<img src="photo/res.png"  width="40%" height="100%">	
+	</div>
+
 	
 	
 	
@@ -66,7 +67,7 @@ session_start();
             echo '<li class="dropdown"><a href="#" class="dropbtn">Get Involved</a>';
             echo '<div class="dropdown-content">';
 			echo '<a href="login.php">Log In</a>';
-			echo '<a href="#">Donate</a>';
+			echo '<a href="donate.php">Donate</a>';
             echo '</div>';
 			echo '</li>';
 			}

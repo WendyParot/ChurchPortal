@@ -2,8 +2,8 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Funeral</title>
-        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Request Certificate</title>
+        <link rel="stylesheet" type="text/css" href="../css/index.css">
 
     </head>
     <body>
@@ -13,10 +13,10 @@
 
 <div id="wrapper"> 
 	
-	<?php
-            include 'header.php';
-        ?>
-	
+	<div id="header"> 
+	<img src="../photo/res.png"  width="40%" height="100%">	
+	</div>
+
 	
 	
 	
@@ -26,7 +26,7 @@
 		<b><li>
 		<a href="index.php">Home &nbsp &nbsp </a>
 		</li>
-                 <li class="dropdown"><a href="#" class="dropbtn">Reservation</a>
+                <li class="dropdown"><a href="#" class="dropbtn">Reservation</a>
             <div class="dropdown-content">
                 
                 <a href="baptism.php">Baptism</a>
@@ -34,13 +34,12 @@
                 <a href="funeral.php">Funeral</a>
 				
 	</li>
-		
+		<li>
+		<a href="Request.php">Request Certificate &nbsp &nbsp </a>
+		</li>
                 <li>
-                    <a href="#">About Us &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    <a href="about.php">About Us &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                         &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
@@ -57,8 +56,8 @@
 			if(!isset($_SESSION["id"])){
             echo '<li class="dropdown"><a href="#" class="dropbtn">Get Involved</a>';
             echo '<div class="dropdown-content">';
-			echo '<a href="login.php">Log In</a>';
-			echo '<a href="donate.php">Donate</a>';
+			echo '<a href="../logout.php">Log Out</a>';
+			echo '<a href="#">Donate</a>';
             echo '</div>';
 			echo '</li>';
 			}
@@ -81,7 +80,7 @@
 	
 	<div id="image">		
 		
-	<img src="photo/diedd.jpg" width="100%" height="500px" align="left">
+	<img src="../photo/diedd.jpg" width="100%" height="500px" align="left">
 	<center><h2>FUNERAL</h2></center>
 	
 </div>
@@ -92,7 +91,7 @@
 		
 		(Order of Christian Funerals, no. 4)</center></p>
                 
-	 <form name="announcement" method="POST" action="login.php" enctype="multipart/form-data">
+                <form name="announcement" method="POST" action="reserve_funeral.php" enctype="multipart/form-data">
 					
          <center>   <button style="font-size:15pt;font-weight: bold;color:gray;input:focus{background-color:gray}">RESERVE</button></center>
            
