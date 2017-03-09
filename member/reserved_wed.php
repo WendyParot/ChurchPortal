@@ -13,17 +13,17 @@ $badd = $_POST['badd'];
 $bage = $_POST['bage'];
 $bemail = $_POST['bemail'];
 $bcontact = $_POST['bcontact'];
-$date = $_POST['date'];
+$weddate = $_POST['weddate'];
 $reception = $_POST['reception'];
 	
 include '../dbconnect.php';
 
-$sql = "INSERT into wedding 
-VALUES ('$gname', '$lname', '$add', '$age', '$email', '$contact', '$bname', '$blname', '$badd','$bage', '$bemail', '$bcontact', '$date', '$reception')";
-	$addstud = mysql_query ($sql) or die (mysql_error());
+$sql_insert = "INSERT into wedding (gname, lname, add, age, email, contact, bname, blname, badd, bage, bemail, bcontact, weddate, reception)
+VALUES ('$gname', '$lname', '$add', '$age', '$email', '$contact', '$bname', '$blname', '$badd','$bage', '$bemail', '$bcontact', '$weddate', '$reception')";
+	$addstud = mysql_query ($sql_insert) or die (mysql_error());
 
 
- echo'gname';    
+    
 
 
 ?>

@@ -41,9 +41,9 @@
 		 <li class="dropdown"><a href="#" class="dropbtn">Request     &nbsp &nbsp</a>
             <div class="dropdown-content">
                 
-                <a href="#">Baptism</a>
-		<a href="#">Wedding</a>
-                <a href="#">Funeral</a>
+                <a href="bapreservelist.php">Baptism</a>
+                <a href="wedreservelist.php">Wedding</a>
+                <a href="funreservelist.php">Funeral</a>
 				
 	</li>
 		

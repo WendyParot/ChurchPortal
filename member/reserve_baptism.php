@@ -1,14 +1,12 @@
 <?php include '../dbconnect.php';
-
 ob_start();
 session_start();
 ?>
-
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Wedding Application</title>
+        <title>Baptism Application</title>
         <link rel="stylesheet" type="text/css" href="../css/wedrev.css">
 
     </head>
@@ -41,33 +39,27 @@ session_start();
 		<center>
 		
 	<table border="0" cellpadding="8%">
-	 <form class="form-horizontal" action="reserved_wed.php" method="post">
-			<tr>
+            <form class="form-horizontal" action="reserved_bap.php" method="post"> 		<tr>
 		<br>
-		<td colspan="2" align="center">Groom's Information<hr></b></td>
+		<td><a colspan="2" align="center">Parent's Name<hr></b></td>
 	</tr>
 
 	<tr>
-		<td>Groom's Name:</td>
-		<td><input name="gname" id="gname" type="text" required></td>
+		<td>Mother's Name:</td>
+		<td><input name="mname" id="mname" type="text" required></td>
 
 	</tr>
 	<tr>
-		<td>Last Name:</td>
-		<td><input name="lname" id="lname" type="text" required></td>
+		<td>Father's Name:</td>
+		<td><input name="fname" id="fname" type="text" required></td>
 
 	</tr>
             	<tr>
 		<td>Address:</td>
-		<td><input name="add" id="add" type="text" required></td>
+		<td><input name="address" id="address" type="text" required></td>
 
 	</tr>
-	<tr>
-		<td>Age:</td>
-		<td><input name="age" id="age" type="text" required></td>
-
-	</tr>
-            <tr>
+	    <tr>
 		<td>Email:</td>
 		<td><input name="email" id="email" type="text" required></td>
 
@@ -80,48 +72,29 @@ session_start();
 
         <tr>
 		<br>
-		<td colspan="2" align="center">Bride's Information<hr></b></td>
+		<td colspan="2" align="center">Baby's Information<hr></b></td>
 	</tr>
 
 	<tr>
-		<td>Bride's Name:</td>
+		<td>Baby's Name:</td>
 		<td><input name="bname" id="bname" type="text" required></td>
 
 	</tr>
-	<tr>
-		<td>Last Name:</td>
-		<td><input name="blname" id="blname" type="text" required></td>
-
-	</tr>
-            	<tr>
-		<td>Address:</td>
-		<td><input name="badd" id="badd" type="text" required></td>
-
-	</tr>
-	<tr>
+		<tr>
 		<td>Age:</td>
 		<td><input name="bage" id="bage" type="text" required></td>
 
 	</tr>
-            <tr>
-		<td>Email:</td>
-		<td><input name="bemail" id="bemail" type="text" required></td>
-                
+        <tr>
+		<td> Gender:</td>
+                <td> <input type="radio" name="gender" value="F"required>Female &nbsp;<input type="radio" name="gender" value="pm"required>Male </td>
+			
 	</tr>
-                <tr>
-		<td>Contact Number:</td>
-		<td><input name="bcontact" id="bcontact" type="text" required></td>
-
-	</tr>
-
-            <br>
-		<td colspan="2" align="center">Wedding Information<hr></b></td>
-	</tr>
-
+          
 	<tr>
 		<td>Date:</td>
 		
-                <td colspan=2><input type="date" name="weddate" id="weddate"></td>
+                <td colspan=2><input type="date" name="date"></td>
 
 	</tr>
 	
@@ -135,7 +108,7 @@ session_start();
 
 
 	</tr></center>
-
+</form>
 
 
 	

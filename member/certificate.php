@@ -38,7 +38,7 @@
 		<a href="Request.php">Request Certificate &nbsp &nbsp </a>
 		</li>
                 <li>
-                    <a href="../donate.php">Donate &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    <a href="donate.php">Donate &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                        &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
