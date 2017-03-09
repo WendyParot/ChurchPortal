@@ -18,7 +18,7 @@ $reception = $_POST['reception'];
 	
 include '../dbconnect.php';
 
-$sql_insert = "INSERT into wedding (gname, lname, add, age, email, contact, bname, blname, badd, bage, bemail, bcontact, weddate, reception)
+$sql_insert = "INSERT into wedding (gname, lname, `add`, age, email, contact, bname, blname, badd, bage, bemail, bcontact, weddate, reception)
 VALUES ('$gname', '$lname', '$add', '$age', '$email', '$contact', '$bname', '$blname', '$badd','$bage', '$bemail', '$bcontact', '$weddate', '$reception')";
 	$addstud = mysql_query ($sql_insert) or die (mysql_error());
 
@@ -27,3 +27,7 @@ VALUES ('$gname', '$lname', '$add', '$age', '$email', '$contact', '$bname', '$bl
 
 
 ?>
+<script>
+    alert("Successfully Submitted Request.");
+    window.location="index.php";
+</script>

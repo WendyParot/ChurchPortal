@@ -1,24 +1,18 @@
 <?php
-		$host = "localhost";
-		$username = "root";
-		$password = "";
-		$db_name = "reschurch";
-		$tb_name = "announcement";
+	include '../dbconnect.php';
+session_start();
 
-		$conn = new mysqli($host, $username, $password, $db_name);
-			$con=mysql_connect($host,$username,$password)or die(mysql_error());
-			mysql_select_db($db_name, $con) or die(mysql_error());
-			
-			
+
+$sql = "UPDATE user SET
+		msg = '".$_POST['msg']."' ,
+		event = '".$_POST['event']."',
+                    id = '".$_POST['id']."'
+		WHERE
+		id = ".$_POST['id'] ;
+$result = mysql_query($sql);
 	
-			$query = "update $tb_name set
-			event = '".$_POST['event']."',
-			msg	= '".$_POST['msg']."
-			id = ".$_POST['id']."
-			where
-			id = ".$_POST['id'];
-	
-			
-		$result = mysql_query($query);
-		header('Location:index.php');			
+	header( 'Location:index.php' ) ;
 ?>
+<script>
+    alert("<?php echo $result; ?>");
+    </script>

@@ -115,10 +115,10 @@
 		
 			<tbody>
 				<?php 
-				$sql = mysql_query("SELECT * FROM baptism ");
+				$sql = mysql_query("SELECT * FROM baptism ORDER BY id DESC");
+                                
 				while($row=mysql_fetch_array($sql)){
-				?>
-				<tr>
+				?>			<tr>
 					<td><?php echo $row['mname']; ?></td>
 					<td><?php echo $row['fname']; ?></td>
 					<td><?php echo $row['address']; ?></td>

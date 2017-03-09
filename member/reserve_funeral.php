@@ -1,3 +1,9 @@
+<?php include '../dbconnect.php';
+ob_start();
+session_start();
+?>
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -35,7 +41,7 @@
 		<center>
 		
 	<table border="0" cellpadding="8%">
-	 <form name="wedding" method="POST" action="reserved_funeral.php" enctype="multipart/form-data">
+	   <form class="form-horizontal" action="reserved_funeral.php" method="post"> 		<tr>
 			<tr>
 		<br>
 		<td colspan="2" align="center">Applicant's Information<hr></b></td>
@@ -43,27 +49,27 @@
 
 	<tr>
 		<td>Name:</td>
-		<td><input type="text" name="name" size="30" required></td>
+		<td><input name="name" id="name" type="text" required></td>
 
 	</tr>
 	<tr>
 		<td>Last Name:</td>
-		<td><input type="text" name="lname" size="30" required></td>
+		<td><input name="lname" id="lname" type="text" required></td>
 
 	</tr>
             	<tr>
 		<td>Address:</td>
-		<td><input type="text" name="add" size="30" required></td>
+		<td><input name="add" id="add" type="text" required></td>
 
 	</tr>
 	<tr>
 		<td>Email:</td>
-		<td><input type="text" name="email" size="30" required></td>
+		<td><input name="email" id="email" type="text" required></td>
 
 	</tr>
             <tr>
 		<td>Contact Number:</td>
-		<td><input type="text" name="contact" size="30" required></td>
+		<td><input name="contact" id="contact" type="text" required></td>
 
 	
         <tr>
@@ -74,50 +80,42 @@
 
 	<tr>
 		<td>Name:</td>
-		<td><input type="text" name="dname" size="30" required></td>
+		<td><input name="dname" id="dname" type="text" required></td>
 
 	</tr>
 	<tr>
 		<td>Last Name:</td>
-		<td><input type="text" name="dlname" size="30" required></td>
+		<td><input name="dlname" id="dlname" type="text" required></td>
                 
 	</tr>
             	<tr>
 		<td>Relation to Applicant:</td>
-		<td><input type="text" name="relationship" size="30" required></td>
+		<td><input name="relationship" id="relationship" type="text" required></td>
 
 	</tr>
 	<tr>
 		<td>Age:</td>
-		<td><input type="text" name="bage" size="30" required></td>
+		<td><input name="age" id="age" type="text" required></td>
 
 	</tr>
             <tr>
-		<td>Special stories/anecdotes or themes to be included as part of ceremony
-:</td>
-		<td><input type="text" name="stories" size="40" required></td>
-                
-	</tr>
-                <tr>
-		<td>
-Special scripture to include in ceremony, if any:</td>
-		<td><input type="text" name="scripture" size="40" required></td>
+		<td>Date of Death:</td>
+		<td><input name="death" id="death" type="date" required></td>
 
 	</tr>
-
             <tr>
 		<td>Location of Reception:</td>
-                <td><input type="text" name="reception" size="30" required></td>
+                <td><input name="reception" id="reception" type="text" required></td>
 </tr>
 	<tr>
             
 		<td>Date:</td>
 		
-                <td colspan=2><input type="datetime-local" name="date"></td>
+                <td colspan=2><input type="date" name="date"></td>
 
 	<center><tr>
-		<td>  <a class="btn btn-success" href="reserve_funeral.php">Reserve</a></td>
-  
+		<td colspan=2 style="text-align: center;"><input type="submit" name="submit" value="SUBMIT" style="width: 100px; heigth: 50px;"/></td>
+
 
 	</tr></center>
 

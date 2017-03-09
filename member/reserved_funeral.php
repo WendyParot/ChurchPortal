@@ -10,17 +10,22 @@ $contact = $_POST['contact'];
 $dname = $_POST['dname'];
 $dlname = $_POST['dlname'];
 $relationship = $_POST['relationship'];
-$stories = $_POST['stories'];
-$scripture = $_POST['scripture'];
+$death = $_POST['death'];
+$reception = $_POST['reception'];
+$date = $_POST['date'];
 	
 include '../dbconnect.php';
 
-$sql_insert = "INSERT into funeral (name, lname, add, age, email, contact, dname, dlname, relationship, stories, scripture) 
-VALUES ('$name', '$lname', '$add', '$age', '$email', '$contact', '$dname', '$dlname', '$relationship', '$stories', '$scripture')";
+$sql_insert = "INSERT into funeral (fname, lname, appaddress, age, email, contact, dname, dlname, relation, death, reception, dateoffuneral) 
+VALUES ('$name', '$lname', '$add', '$age', '$email', '$contact', '$dname', '$dlname', '$relationship', '$death', '$reception','$date')";
 	$addstud = mysql_query ($sql_insert) or die (mysql_error());
 
 
- echo'name';    
-
+ 
 
 ?>
+
+<script>
+    alert("Successfully Submitted Request.");
+    window.location="index.php";
+</script>

@@ -118,10 +118,10 @@
 		
 			<tbody>
 				<?php 
-				$sql = mysql_query("SELECT * FROM funeral ");
+				$sql = mysql_query("SELECT * FROM funeral ORDER BY id DESC");
+                                
 				while($row=mysql_fetch_array($sql)){
-				?>
-				<tr>
+				?>	<tr>
 					<td><?php echo $row['name']; ?></td>
 					<td><?php echo $row['lname']; ?></td>
 					<td><?php echo $row['add']; ?></td>

@@ -2,7 +2,7 @@
 include('header.php');
 ?>
 <body>
-
+    
 
     <?php
     include('db.php');
@@ -11,7 +11,7 @@ include('header.php');
     $sql = "SELECT * FROM 
 			announcement
 			 WHERE
-			id = $id";
+			id = ".$id;
     $result = mysql_fetch_array(mysql_query($sql));
     
 
@@ -87,7 +87,8 @@ include('header.php');
 
     <!---------------------------------------------------------------------------------->
 
-    <form name="createannoucement" method="POST" action="update_announcement.php">
+    <form class="form-horizontal" action="update_announcement.php" method="post">    
+
 <table border="0" align="center" cellpadding="10" style="border: 1px solid #141E30;">
 
 
@@ -98,17 +99,16 @@ include('header.php');
 
             <br>
             <h2><font color="white">Event</h2></font>
-            <input type="text" name="event" value="<?php echo $result['event'] ?>">
-
-
+            
+<input name="event" id="event" type="text" value="<?= $result['event'] ?>" />
 
             <h2><font color="white">Message</h2></font>
-            <textarea rows="10" cols="50" name="msg" required ><?php echo $result['msg'] ?></textarea>
+            <textarea id="msg" rows="10" cols="50" name="msg" required value="<?= $result['msg'] ?>"></textarea>
 
             <br>
             <br>
 
-            <input name="newid" type="hidden" value="<?= $id ?>">
+            <input name="id" type="hidden" value="<?= $id?>">
 
             <input type="submit" value="update" name="sub_post">    </center>
 </table>

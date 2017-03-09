@@ -133,8 +133,8 @@
                                         <td align="center"><?php echo $record['date']; ?></td>
 					<td align="center"><?php echo $record['time']; ?></td>
 					
-					<td><a class="btn btn-success" href="edit_announcement.php<?php echo '?id='.$row['id']; ?>">Edit</a></td>
-					<td><a class="btn btn-danger" href="delete_announcement.php<?php echo '?id='.$row['id']; ?>">Delete</a></td>
+					<td><a class="btn btn-success" href="edit_announcement.php<?php echo '?id='.$record['id']; ?>">Edit</a></td>
+					<td><a class="btn btn-danger" href="delete_announcement.php<?php echo '?id='.$record['id']; ?>">Delete</a></td>
 </tr>
 					<?php endforeach; ?>
 

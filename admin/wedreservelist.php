@@ -119,7 +119,8 @@
 		
 			<tbody>
 				<?php 
-				$sql = mysql_query("SELECT * FROM wedding ");
+				$sql = mysql_query("SELECT * FROM wedding ORDER BY id DESC");
+                                
 				while($row=mysql_fetch_array($sql)){
 				?>
 				<tr>
@@ -135,7 +136,7 @@
 					<td><?php echo $row['bage']; ?></td>
                                         <td><?php echo $row['bemail']; ?></td>
 					<td><?php echo $row['bcontact']; ?></td>
-                                        <td><?php echo $row['date']; ?></td>
+                                        <td><?php echo $row['weddate']; ?></td>
 					<td><?php echo $row['reception']; ?></td>
 					<td><a class="btn btn-success" href="#<?php echo '?id='.$row['user_id']; ?>">Confirm</a></td>
 					
