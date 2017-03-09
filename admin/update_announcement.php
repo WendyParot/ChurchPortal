@@ -13,7 +13,7 @@
 	
 			$query = "update $tb_name set
 			event = '".$_POST['event']."',
-			msg	= '".$_POST['msg']."',
+			msg	= '".$_POST['msg']."
 			id = ".$_POST['id']."
 			where
 			id = ".$_POST['id'];

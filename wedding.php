@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Wedding</title>
-        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/wed.css">
 
     </head>
     <body>
@@ -85,23 +85,22 @@
 	<center><h2>WEDDING</h2></center>
 	
 </div>
-         
+     <div class="row-fluid">
+ 
+ <div class="span12">
+     
             <p><center>Marriage in the Catholic Church, also called matrimony, is the "covenant by which a man and a woman establish between themselves a partnership of the whole of life
 		 and which is ordered by its nature to the good of the spouses and the procreation and education of offspring",
 		 and which "has been raised by Christ the Lord to the dignity of a sacrament between the baptised." Catholic matrimonial law,
 		 based on Roman law regarding its focus on marriage as a free mutual agreement or contract, became the basis for the marriage law of all European countries, at least up to the Reformation.</center></p>
 
-	 <form name="announcement" method="POST" action="login.php" enctype="multipart/form-data">
-					
-         <center>   <button style="font-size:15pt;font-weight: bold;color:gray;input:focus{background-color:gray}">RESERVE</button></center>
-           
-        </form>
+                 <center><a class="btn btn-success" href="login.php">Reserve</a></center>
         <br>
        
         
         </div> 
-            
-            
+        </div>    
+        </div>    
 			
 	<?php
 	include 'footer.php';

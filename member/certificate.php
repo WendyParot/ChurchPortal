@@ -38,8 +38,8 @@
 		<a href="Request.php">Request Certificate &nbsp &nbsp </a>
 		</li>
                 <li>
-                    <a href="about.php">About Us &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    <a href="../donate.php">Donate &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                       &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
@@ -54,11 +54,8 @@
 		</li>
                 <?php 
 			if(!isset($_SESSION["id"])){
-            echo '<li class="dropdown"><a href="#" class="dropbtn">Get Involved</a>';
-            echo '<div class="dropdown-content">';
-			echo '<a href="../logout.php">Log Out</a>';
-			echo '<a href="#">Donate</a>';
-            echo '</div>';
+            echo '<li class="dropdown"><a href="../logout.php" class="dropbtn">Log Out</a>';
+                     echo '</div>';
 			echo '</li>';
 			}
 			

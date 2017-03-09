@@ -103,8 +103,11 @@ if (isset($_SESSION['username'])){
 	<div id="site_content">		
 		
             <img src="photo/prayer.jpeg" width="900px" height="500px" align="left">
-	
-	
+	</div>
+	<div class="row-fluid">
+ 
+ <div class="span12">
+
 		<div id="login">
                     
                     
@@ -140,7 +143,7 @@ if (isset($_SESSION['username'])){
 			</table>
                             <br>
                             <br>
-                            <a href="forgot_password.php">Forgot Password?</a>&emsp;&emsp;&emsp;
+                            <a href="forgot.php">Forgot Password?</a>&emsp;&emsp;&emsp;
 			Not yet registered?&nbsp;<a href="register.php">Sign Up!</a>
 			</form>
                         </b>
@@ -188,8 +191,8 @@ if (isset($_SESSION['username'])){
 			
 				
 		</div>
-	
-	
+	</div>
+	</div>
 	
       </div>
 

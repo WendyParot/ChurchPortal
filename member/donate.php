@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Donate</title>
-        <link rel="stylesheet" type="text/css" href="css/donate.css">
+        <link rel="stylesheet" type="text/css" href="../css/donatemem.css">
          <script src="../js/jquery.js" type="text/javascript"></script>
 
 <script type="text/javascript" charset="utf-8" language="javascript" src="../js/jquery.dataTabless.js"></script>
@@ -18,7 +18,7 @@
 <div id="wrapper"> 
 	
 	<div id="header"> 
-	<img src="photo/res.png"  width="40%" height="100%">	
+	<img src="../photo/res.png"  width="40%" height="100%">	
 	</div>
 
 	
@@ -36,13 +36,12 @@
                 <a href="funeral.php">Funeral</a>
 				
 	</li>
-		
+		<li>
+		<a href="certificate.php">Request Certificate &nbsp &nbsp </a>
+		</li>
                 <li>
-                    <a href="about.php">About Us &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    <a href="donate.php">Donate &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                        &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
@@ -55,17 +54,15 @@
                     &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</a>
 		</li>
-                <?php 
+              <?php 
 			if(!isset($_SESSION["id"])){
-            echo '<li class="dropdown"><a href="#" class="dropbtn">Get Involved</a>';
-            echo '<div class="dropdown-content">';
-			echo '<a href="login.php">Log In</a>';
-			echo '<a href="donate.php">Donate</a>';
+            echo '<li class="dropdown"><a href="../logout.php" class="dropbtn">Log Out</a>';
+           
             echo '</div>';
 			echo '</li>';
 			}
-					
-        if(isset($_SESSION['id']))
+		
+	        if(isset($_SESSION['id']))
         {
         ?>
         <li><a href="#">My Account</a></li>
@@ -82,7 +79,7 @@
 	
 	<div id="site_content">		
 		
-            <img src="photo/donate.jpg" width="100%" height="600px" align="left">
+            <img src="../photo/donate.jpg" width="100%" height="600px" align="left">
         </div>
  <div class="row-fluid">
  

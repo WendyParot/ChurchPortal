@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Request Certificate</title>
-        <link rel="stylesheet" type="text/css" href="../css/index.css">
+        <link rel="stylesheet" type="text/css" href="../css/funn.css">
 
     </head>
     <body>
@@ -35,11 +35,11 @@
 				
 	</li>
 		<li>
-		<a href="Request.php">Request Certificate &nbsp &nbsp </a>
+		<a href="certificate.php">Request Certificate &nbsp &nbsp </a>
 		</li>
                 <li>
-                    <a href="about.php">About Us &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    <a href="../donate.php">Donate &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                      &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
@@ -54,10 +54,8 @@
 		</li>
                 <?php 
 			if(!isset($_SESSION["id"])){
-            echo '<li class="dropdown"><a href="#" class="dropbtn">Get Involved</a>';
-            echo '<div class="dropdown-content">';
-			echo '<a href="../logout.php">Log Out</a>';
-			echo '<a href="#">Donate</a>';
+            echo '<li class="dropdown"><a href="../logout.php" class="dropbtn">Log Out</a>';
+           
             echo '</div>';
 			echo '</li>';
 			}
@@ -84,20 +82,21 @@
 	<center><h2>FUNERAL</h2></center>
 	
 </div>
-            
+   <div class="row-fluid">
+ 
+ <div class="span12">
+                   
             <p><center> "At the death of a Christian, whose life of faith was begun in the waters of Baptism and strengthened at the Eucharistic table, <br>
 		the Church intercedes on behalf of the deceased because of its confident belief that death is not the end, nor does it break the bonds forged in life. <br>
 		The Church also ministers to the sorrowing and consoles them in the funeral rites with the comforting Word of God and the Sacrament of the Eucharist."<br>
 		
 		(Order of Christian Funerals, no. 4)</center></p>
                 
-                <form name="announcement" method="POST" action="reserve_funeral.php" enctype="multipart/form-data">
-					
-         <center>   <button style="font-size:15pt;font-weight: bold;color:gray;input:focus{background-color:gray}">RESERVE</button></center>
-           
-        </form>
+                <center><a class="btn btn-success" href="reserve_funeral.php">Reserve</a></center>
         <br>
-       	</div> 
+       	</div>
+       	</div>
+            	</div>
 			
 	<?php
 	include 'footer.php';

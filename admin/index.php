@@ -6,8 +6,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Admin</title>
-        <link rel="stylesheet" type="text/css" href="../css/admin.css">
-        <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="../css/manage.css">
         <script src="../js/jquery.js" type="text/javascript"></script>
 <script src="../js/bootstrap.js" type="text/javascript"></script>
 
@@ -49,7 +48,7 @@
 	</li>
 		
                 <li>
-                    <a href="manageuser.php">Members &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    <a href="users.php">Members &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                         &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                         &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                         &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
@@ -95,22 +94,27 @@
    
         </div>
 <br>
-	<h1 align="center" style="color:#141E30;font-family:ethno;">ANNOUNCEMENT</font></h1>
+<div class="row-fluid">
+ 
+ <div class="span12">
+	
+	<h1 align="center" >ANNOUNCEMENT</font></h1>
 			<hr style="border: 1px solid gray">
 			<br>
 
 		
-			<table border=1 cellpadding=4 cellspacing=5 align=center  style="border: 1px solid #141E30; width:750px;">
+			<div style="width:90%">
+		<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example">
 	
 				<tr>
-					<th align="center" style="color:#141E30;font-family:rng; font-size:15px;">ID</th>
-					<th align="center" style="color:#141E30;font-family:rng; font-size:15px;">Event</th>
-					<th align="center" style="color:#141E30;font-family:rng; font-size:15px;">Message</th>
+					<th align="center" >ID</th>
+					<th align="center" >Event</th>
+					<th align="center" >Message</th>
 		
-                                        <th align="center" style="color:#141E30;font-family:rng; font-size:15px;">Date</th>
-					<th align="center" style="color:#141E30;font-family:rng; font-size:15px;">Time</th>
-					<th align="center" style="color:#141E30;font-family:rng; font-size:15px;">Edit</th>
-					<th align="center" style="color:#141E30;font-family:rng; font-size:15px;">Delete</th>
+                                        <th align="center" >Date</th>
+					<th align="center" >Time</th>
+					<th align="center" >Edit</th>
+					<th align="center" >Delete</th>
 		
 				</tr>
 
@@ -122,18 +126,16 @@
 				<?php if($count>0): ?>
 					<?php  foreach($loadtb as $record): ?>
 					<tr>
-					<td align="center" style="color:#141E30;font-family:rng; font-size:15px;"><?php echo $record['id']; ?></td>
-					<td align="center" style="color:#141E30;font-family:rng; font-size:15px;"><?php echo $record['event']; ?></td>
-					<td align="center" style="color:#141E30;font-family:rng; font-size:15px;"><?php echo $record['msg']; ?></td>
+					<td align="center"><?php echo $record['id']; ?></td>
+					<td align="center"><?php echo $record['event']; ?></td>
+					<td align="center"><?php echo $record['msg']; ?></td>
 					
-                                        <td align="center" style="color:#141E30;font-family:rng; font-size:15px;"><?php echo $record['date']; ?></td>
-					<td align="center" style="color:#141E30;font-family:rng; font-size:15px;"><?php echo $record['time']; ?></td>
+                                        <td align="center"><?php echo $record['date']; ?></td>
+					<td align="center"><?php echo $record['time']; ?></td>
 					
-					<td align="center" style="color:#141E30;font-family:rng; font-size:15px;"><a href="edit_announcement.php
-					<?php echo '?id='.$record['id']; ?>">Edit</a></td>
-                                        <td align="center" style="color:#141E30;font-family:rng; font-size:15px;"><a href="delete_announcement.php
-					<?php echo '?id='.$record['id']; ?>" onClick="return confirm('Delete This Announcement?')">Delete</a></td>
-					</tr>
+					<td><a class="btn btn-success" href="edit_announcement.php<?php echo '?id='.$row['id']; ?>">Edit</a></td>
+					<td><a class="btn btn-danger" href="delete_announcement.php<?php echo '?id='.$row['id']; ?>">Delete</a></td>
+</tr>
 					<?php endforeach; ?>
 
 				<?php else: ?>
@@ -148,6 +150,10 @@
 </div>
 
 	</div> 
+		</div>	
+                     
+		</div>	
+                    
 		</div>	
     	<?php
 	include 'footer.php';

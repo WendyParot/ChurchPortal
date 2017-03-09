@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Funeral</title>
-        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/fun.css">
 
     </head>
     <body>
@@ -36,7 +36,7 @@
 	</li>
 		
                 <li>
-                    <a href="#">About Us &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    <a href="about.php">About Us &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                         &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                         &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                         &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
@@ -85,20 +85,21 @@
 	<center><h2>FUNERAL</h2></center>
 	
 </div>
-            
+    <div class="row-fluid">
+ 
+ <div class="span12">
+         
             <p><center> "At the death of a Christian, whose life of faith was begun in the waters of Baptism and strengthened at the Eucharistic table, <br>
 		the Church intercedes on behalf of the deceased because of its confident belief that death is not the end, nor does it break the bonds forged in life. <br>
 		The Church also ministers to the sorrowing and consoles them in the funeral rites with the comforting Word of God and the Sacrament of the Eucharist."<br>
 		
 		(Order of Christian Funerals, no. 4)</center></p>
                 
-	 <form name="announcement" method="POST" action="login.php" enctype="multipart/form-data">
-					
-         <center>   <button style="font-size:15pt;font-weight: bold;color:gray;input:focus{background-color:gray}">RESERVE</button></center>
-           
-        </form>
-        <br>
+	  <center><a class="btn btn-success" href="login.php">Reserve</a></center>
+    <br>
        	</div> 
+		</div> 
+		</div> 
 			
 	<?php
 	include 'footer.php';

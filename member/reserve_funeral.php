@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Funerals</title>
-        <link rel="stylesheet" type="text/css" href="../css/reserve.css">
+        <link rel="stylesheet" type="text/css" href="../css/funrev.css">
 
     </head>
     <body>
@@ -27,7 +27,10 @@
 		</center>
 	</div>
 	<div id="one">
-		
+	<div class="row-fluid">
+ 
+ <div class="span12">
+ 	
 		
 		<center>
 		
@@ -112,13 +115,15 @@ Special scripture to include in ceremony, if any:</td>
 		
                 <td colspan=2><input type="datetime-local" name="date"></td>
 
-	</tr>
-	
-	
-		<td><button style="font-size:15pt;font-weight: bold;color:gray;input:focus{background-color:gray}">RESERVE</button></td>
-           
+	<center><tr>
+		<td>  <a class="btn btn-success" href="reserve_funeral.php">Reserve</a></td>
+  
 
-	</tr>
+	</tr></center>
+
+
+
+	
 
 <br>
 
@@ -131,6 +136,8 @@ Special scripture to include in ceremony, if any:</td>
                  
                
 			</div>
+		</div>
+            </div>
 		</div>
 		
 	<?php

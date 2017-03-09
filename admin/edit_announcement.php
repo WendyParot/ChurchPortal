@@ -17,7 +17,67 @@ include('header.php');
 
     
     ?>
-    <h1 align="center" style="color:#141E30;font-family:ethno;"><img src="images/icons/write2.png"  align="top" style="height:50px; width:50px;"><font  style="vertical-align:sub;margin-left:5px;">Edit Blog Post</font></h1>
+    
+    
+    <!DOCTYPE html>
+<html>
+<head>
+	<title>Announcement</title>
+<link rel="stylesheet" type="text/css" href="../css/announcement.css">
+ 
+
+<body>
+
+
+<div id="wrapper"> 
+	
+	<div id="header"> 
+	<img src="../photo/res.png"  width="40%" height="100%">	
+	</div>
+
+	
+	
+	
+	<div id="nav">
+		 <nav>
+		<ul>
+		<b><li>
+		<a href="index.php">Home &nbsp &nbsp </a>
+		</li>
+                <li class="dropdown"><a href="add_annoucement.php" class="dropbtn">Announcement     &nbsp </a>
+            <div class="dropdown-content">
+                
+                
+		 <li class="dropdown"><a href="#" class="dropbtn">Request     &nbsp &nbsp</a>
+            <div class="dropdown-content">
+                
+                <a href="#">Baptism</a>
+		<a href="#">Wedding</a>
+                <a href="#">Funeral</a>
+				
+	</li>
+		
+                <li>
+                    <a href="manageuser.php">Members &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    &nbsp &nbsp      &nbsp &nbsp     &nbsp &nbsp
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</a>
+		</li>
+            </div>
+
+<div id="body">
+
+    
+    <h1 align="center" style="color:#141E30;font-family:ethno;"><font  style="vertical-align:sub;margin-left:5px;">Edit Announcement</font></h1>
     <hr style="border: 1px solid #141E30">
     <br>
 
@@ -28,12 +88,12 @@ include('header.php');
     <!---------------------------------------------------------------------------------->
 
     <form name="createannoucement" method="POST" action="update_announcement.php">
+<table border="0" align="center" cellpadding="10" style="border: 1px solid #141E30;">
 
 
         <center>
-            <br>
-            <!--<h2><font color="white">Title</h2></font>-->
-
+          <br>
+            
 
 
             <br>
@@ -50,14 +110,19 @@ include('header.php');
 
             <input name="newid" type="hidden" value="<?= $id ?>">
 
-            <input type="submit" value="update" name="sub_post">
-
-        </center>	
+            <input type="submit" value="update" name="sub_post">    </center>
+</table>
+       	
     </form>
     <!---------------------------------------------------------------------------------->	
 
 
 
 </div>
+                     </div>
+		<?php
+	include 'footer.php';
+	
+?>
 </body>
 </html>

@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Wedding Application</title>
-        <link rel="stylesheet" type="text/css" href="../css/reserve.css">
+        <link rel="stylesheet" type="text/css" href="../css/wedrev.css">
 
     </head>
     <body>
@@ -27,7 +27,10 @@
 		</center>
 	</div>
 	<div id="one">
-		
+ <div class="row-fluid">
+ 
+ <div class="span12">
+  		
 		
 		<center>
 		
@@ -121,11 +124,11 @@
                 <td><input type="text" name="reception" size="30" required></td>
 
 	
-	<tr>
-		<td><button style="font-size:15pt;font-weight: bold;color:gray;input:focus{background-color:gray}">RESERVE</button></td>
-           
+	<center><tr>
+		<td>  <a class="btn btn-success" href="reserve_wed.php">Reserve</a></td>
+  
 
-	</tr>
+	</tr></center>
 
 
 
@@ -138,6 +141,8 @@
                  
                
 			</div>
+		</div>
+            	</div>
 		</div>
 		
 	<?php

@@ -2,8 +2,8 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Request Certificate</title>
-        <link rel="stylesheet" type="text/css" href="../css/index.css">
+        <title>Wedding</title>
+        <link rel="stylesheet" type="text/css" href="../css/wedd.css">
 
     </head>
     <body>
@@ -35,11 +35,11 @@
 				
 	</li>
 		<li>
-		<a href="Request.php">Request Certificate &nbsp &nbsp </a>
+		<a href="certificate.php">Request Certificate &nbsp &nbsp </a>
 		</li>
                 <li>
-                    <a href="about.php">About Us &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    <a href="donate.php">Donate &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                        &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
@@ -52,15 +52,14 @@
                     &nbsp &nbsp
                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</a>
 		</li>
-                <?php 
+              <?php 
 			if(!isset($_SESSION["id"])){
-            echo '<li class="dropdown"><a href="#" class="dropbtn">Get Involved</a>';
-            echo '<div class="dropdown-content">';
-			echo '<a href="../logout.php">Log Out</a>';
-			echo '<a href="#">Donate</a>';
+            echo '<li class="dropdown"><a href="../logout.php" class="dropbtn">Log Out</a>';
+           
             echo '</div>';
 			echo '</li>';
 			}
+		
 			
         if(isset($_SESSION['id']))
         {
@@ -83,17 +82,20 @@
 	<center><h2>WEDDING</h2></center>
 	
 </div>
-         
+   <div class="row-fluid">
+ 
+ <div class="span12">
+           
             <p><center>Marriage in the Catholic Church, also called matrimony, is the "covenant by which a man and a woman establish between themselves a partnership of the whole of life
 		 and which is ordered by its nature to the good of the spouses and the procreation and education of offspring",
 		 and which "has been raised by Christ the Lord to the dignity of a sacrament between the baptised." Catholic matrimonial law,
 		 based on Roman law regarding its focus on marriage as a free mutual agreement or contract, became the basis for the marriage law of all European countries, at least up to the Reformation.</center></p>
 	
-         <form name="announcement" method="POST" action="reserve_wedding.php" enctype="multipart/form-data">
-					
-         <center>   <button style="font-size:15pt;font-weight: bold;color:gray;input:focus{background-color:gray}">RESERVE</button></center>
-        <br>
+                 <center><a class="btn btn-success" href="reserve_wedding.php">Reserve</a></center>
+       <br>
         </div> 
+       </div> 
+            </div> 
             
             
 			

@@ -54,11 +54,8 @@
 		</li>
               <?php 
 			if(!isset($_SESSION["id"])){
-            echo '<li class="dropdown"><a href="#" class="dropbtn">Get Involved</a>';
-            echo '<div class="dropdown-content">';
-			echo '<a href="../logout.php">Log Out</a>';
-			echo '<a href="../donate.php">Donate</a>';
-            echo '</div>';
+            echo '<li class="dropdown"><a href="../logout.php" class="dropbtn">Log Out</a>';
+          echo '</div>';
 			echo '</li>';
 			}
 					
